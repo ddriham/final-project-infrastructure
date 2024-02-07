@@ -22,7 +22,6 @@ generate "provider" {
   contents = <<EOF
 provider "aws" {
   region  = "us-east-2"
-  }
 }
 EOF
 }
