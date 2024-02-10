@@ -7,7 +7,6 @@ remote_state {
 
   config = {
     bucket = "ddriham-final"
-
     key = "${path_relative_to_include()}/terraform.tfstate"
     region         = "us-east-2"
     encrypt        = true
