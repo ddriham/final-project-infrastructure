@@ -21,9 +21,7 @@ inputs = {
   argo_cd_ingress_host = "dev-ddriham.argocd"
   prometheus_chart_version = "25.11.1"
   grafana_chart_version    = "7.3.0"
-  karpenter_chart_version  = "0.6.3"
   monitoring_namespace     = "monitoring"
-  karpenter_namespace      = "karpenter"
   grafana_admin_password   = "Aa123456"
   grafana_url              = "grafana.ddriham.local"
 }
@@ -57,7 +55,6 @@ provider "helm" {
 }
 EOF
 }
-
 generate "kube_provider" {
   path      = "kube.tf"
   if_exists = "overwrite_terragrunt"
