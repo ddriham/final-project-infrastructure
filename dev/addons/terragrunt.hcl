@@ -25,6 +25,7 @@ inputs = {
   monitoring_namespace     = "monitoring"
   karpenter_namespace      = "karpenter"
   grafana_admin_password   = "Aa123456"
+  storage_class_name       = "defult_sc"
 }
 
 dependency "eks" {
