@@ -1,6 +1,5 @@
 terraform {
   source = "git@github.com:ddriham/final-project-modules.git//addons?ref=addons-v0.0.1"
-  
 }
 
 include "root" {
@@ -21,7 +20,6 @@ inputs = {
   argo_cd_helm_version = "4.10.0"
   argo_cd_namespace    = "argocd"
   argo_cd_ingress_host = "dev-ddriham.argocd"
-
 }
 
 dependency "eks" {
@@ -50,6 +48,17 @@ provider "helm" {
     cluster_ca_certificate = base64decode(data.aws_eks_cluster.eks.certificate_authority[0].data)
     token                  = data.aws_eks_cluster_auth.eks.token
   }
+}
+EOF
+}
+
+generate "kube_provider" {
+  path      = "kube.tf"
+  if_exists = "overwrite_terragrunt"
+  contents  = <<EOF
+provider "kubernetes" {
+  config_path    = "~/.kube/config"
+  config_context = "arn:aws:eks:us-east-2:343568180534:cluster/dev-ddriham"
 }
 EOF
 }
