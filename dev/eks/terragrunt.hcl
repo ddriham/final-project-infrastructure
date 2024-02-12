@@ -1,5 +1,5 @@
 terraform {
-  source = "git@github.com:ddriham/final-project-modules.git//eks?ref=eks-v0.0.1"
+  source = "git@github.com:ddriham/final-project-modules.git//eks?ref=addons-v0.1.2"
 }
 
 include "root" {

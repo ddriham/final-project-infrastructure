@@ -1,6 +1,5 @@
 terraform {
-  source = "git@github.com:ddriham/final-project-modules.git//vpc?ref=vpc-v0.0.1"
-}
+  source = "git@github.com:ddriham/final-project-modules.git//vpc?ref=addons-v0.1.2
 
 include "root" {
   path = find_in_parent_folders()
