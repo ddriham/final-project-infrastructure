@@ -1,13 +1,5 @@
 terraform {
   source = "git@github.com:ddriham/final-project-modules.git//addons?ref=addons-v0.1.2"
-
-  extra_arguments "ignore_errors" {
-    commands = ["destroy"]
-
-    arguments = [
-      "-ignore-errors"
-    ]
-  }
 }
 
 include "root" {
