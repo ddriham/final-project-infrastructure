@@ -13,8 +13,7 @@ include "env" {
 }
 
 inputs = {
-  env                  = "dev"
-  eks_name             = "${var.env}-ddriham"
+  eks_name             = "dev-ddriham"
   enable_argo_cd       = true
   argo_cd_helm_version = "5.52.0"
   argo_cd_namespace    = "argocd"
