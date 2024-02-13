@@ -15,10 +15,6 @@ include "env" {
 inputs = {
   env                  = include.env.locals.env
   eks_name             = dependency.eks.outputs.eks_name
-  enable_argo_cd       = true
-  argo_cd_helm_version = "4.10.0"
-  argo_cd_namespace    = "argocd"
-  argo_cd_ingress_host = "dev-ddriham.argocd"
   prometheus_chart_version = "25.11.1"
   grafana_chart_version    = "7.3.0"
   monitoring_namespace     = "monitoring"

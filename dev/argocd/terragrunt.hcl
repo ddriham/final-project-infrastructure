@@ -21,8 +21,8 @@ inputs = {
   argo_cd_ingress_host = "dev-ddriham.argocd"
 }
 
-dependency "eks" {
-  config_path = "../eks"
+dependency "addons" {
+  config_path = "../addons"
   
   mock_outputs = {
     eks_name = "ddriham-eks-cluster"
