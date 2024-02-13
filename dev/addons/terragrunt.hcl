@@ -5,7 +5,7 @@ terraform {
     commands = ["destroy"]
 
     arguments = [
-      "-ignor-errors"
+      "-ignore-errors"
     ]
   }
 }
