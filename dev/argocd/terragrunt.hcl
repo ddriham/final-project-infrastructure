@@ -1,5 +1,13 @@
 terraform {
   source = "git@github.com:ddriham/final-project-modules.git//argocd?ref=addons-v0.1.2"
+
+  extra_arguments "ignore_errors" {
+    command = ["destroy"]
+
+    arguments = [
+      "-ignor-errors"
+    ]
+  }
 }
 
 include "root" {
