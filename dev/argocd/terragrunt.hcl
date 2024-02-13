@@ -14,7 +14,7 @@ include "env" {
 
 inputs = {
   env                  = include.env.locals.env
-  eks_name             = dependency.eks.outputs.eks_name
+  eks_name             = "${var.env}-ddriham"
   enable_argo_cd       = true
   argo_cd_helm_version = "5.52.0"
   argo_cd_namespace    = "argocd"
