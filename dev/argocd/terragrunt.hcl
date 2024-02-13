@@ -13,7 +13,7 @@ include "env" {
 }
 
 inputs = {
-  env                  = include.env.locals.env
+  env                  = "dev"
   eks_name             = "${var.env}-ddriham"
   enable_argo_cd       = true
   argo_cd_helm_version = "5.52.0"
